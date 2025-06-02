@@ -10,11 +10,11 @@ public class Appointment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String title; // Ej: "Cita médica con el Dr. Pérez"
+    private String title;
     private LocalDateTime dateTime;
     private String location;
     private String description;
-    private String status; // upcoming, attending, maybe, declined
+    private String status;
 
     public Long getId() {
         return id;
