@@ -9,6 +9,13 @@ Search appointments by title
 Appointment status tracking: upcoming, attending, maybe, declined
 History tracking for each appointment using a secondary table
 RESTful API connected to a MySQL database
+User authentication with JSON Web Tokens (JWT) to protect API access
+
+This project includes JWT-based authentication.
+To access protected endpoints, clients must:
+Authenticate by sending login credentials to the /auth/login endpoint.
+Receive a JWT token in response.
+Include the token in the Authorization header as a Bearer Token for all subsequent requests:
 
 RUN
 CREATE DATABASE citas_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
