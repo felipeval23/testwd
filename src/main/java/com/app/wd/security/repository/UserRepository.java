@@ -25,14 +25,12 @@ public interface UserRepository extends JpaRepository<User, Long> {
 			+ "(:tipoDocum IS NULL OR e.tipoDocumId.id = :tipoDocum) "
 			+ "AND (:codDocum IS NULL OR e.codDocum = :codDocum) "
 			+ "AND (:nomUsuario IS NULL OR e.primerNombre LIKE CONCAT('%', :nomUsuario, '%')) "
-			+ "AND (:empresa IS NULL OR e.empresaId.id = :empresa) "
 			+ "AND (:role IS NULL OR e.roleId.id = :role) "
 			+ "AND (:estado IS NULL OR e.estadoId.id = :estado)")
 	List<User> consultarUsuario(
 			@Param("tipoDocum") Long tipoDocum,
 			@Param("codDocum") String codDocum, 
 			@Param("nomUsuario") String primerNombre, 
-			@Param("empresa")Long empresa, 
 			@Param("role") Long role,
 			@Param("estado") Long estado);
 
